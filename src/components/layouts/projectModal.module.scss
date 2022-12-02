@@ -1,0 +1,52 @@
+.project-card {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-rows: repeat(4, max-content);
+
+  .card-check {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .card-header-box {
+    grid-row: 1;
+    grid-column: 2/4;
+  }
+
+  .card-left {
+    grid-row: 3;
+    grid-column: 1/4;
+  }
+
+  .card-desc {
+    grid-row: 2;
+    grid-column: 1/4;
+  }
+
+  .card-footer-box {
+    grid-row: 4;
+    grid-column: 1/4;
+  }
+
+  @media (min-width: 36em) {
+    grid-template-rows: repeat(3, max-content);
+
+    .card-header-box {
+      grid-column: 2;
+    }
+
+    .card-left {
+      grid-row: 1;
+      grid-column: 3;
+    }
+
+    .card-desc {
+      grid-row: 2;
+      grid-column: 2/4;
+    }
+
+    .card-footer-box {
+      grid-row: 3;
+    }
+  }
+}
